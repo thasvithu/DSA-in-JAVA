@@ -1,0 +1,12 @@
+Insertion Sort Algorithm:
+
+1. Start with the second element (index 1) of the array.
+
+2. Compare the current element with the elements before it.
+	-If the current element is smaller, shift the larger elements to the right to make space for the current element.
+	-Repeat this process until an element smaller than the current element is found or until the beginning of the array is reached.
+
+3. Insert the current element into its correct position in the sorted region.
+	-Place the current element in the position where the comparison in step 2 indicates it should be.
+
+4. Move to the next unsorted element and repeat steps 2-3 until the entire array is sorted.

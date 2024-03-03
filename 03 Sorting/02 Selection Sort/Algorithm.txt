@@ -1,0 +1,18 @@
+Selection Sort Algorithm:
+
+1. Start with the entire array considered as unsorted.
+
+2. Find the minimum element in the unsorted region.
+	- Iterate through the unsorted region to find the minimum element.
+	- Assume the first element is the minimum initially.
+	- If a smaller element is found, update the minimum.
+
+3. Swap the minimum element with the first element of the unsorted region.
+	- Swap the element at the minimum index with the first element of the unsorted region.
+	- The minimum element is now in its correct sorted position.
+
+4. Expand the sorted region by moving the boundary.
+	-Move the boundary between the sorted and unsorted regions one position to the right.
+	-The first element of the unsorted region becomes the next minimum.
+
+5. Repeat steps 2-4 until the entire array is sorted.
