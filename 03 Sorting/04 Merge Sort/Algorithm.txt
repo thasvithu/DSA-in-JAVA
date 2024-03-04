@@ -1,0 +1,31 @@
+Merge Sort Algorithm:
+
+1. Divide: If the array has more than one element, divide it into two halves.
+
+2.Conquer: Recursively apply Merge Sort to the two halves.
+
+3.Merge: Merge the sorted halves to produce a single sorted array.
+
+
+Detailed Steps:
+
+Divide:
+
+3.1 Find the middle of the array by calculating mid = (start + end) / 2.
+
+3.2 Recursively apply Merge Sort to the left half: mergeSort(arr, start, mid).
+
+3.3 Recursively apply Merge Sort to the right half: mergeSort(arr, mid + 1, end).
+
+
+Merge:
+
+3.1 Create temporary arrays to store the left and right halves.
+
+3.2 Copy data to the temporary arrays: leftArray[] = arr[start...mid] and rightArray[] = arr[mid+1...end].
+
+3.3 Merge the two halves back into the original array:
+	- Initialize three pointers: i for the left array, j for the right array, and k for the merged array (starting at start).
+	- Compare elements leftArray[i] and rightArray[j].
+	- Copy the smaller element to the original array, and increment the corresponding pointers.
+	-Repeat until one of the halves is fully copied back.
