@@ -1,29 +1,37 @@
-import vithu.Stack;
+import com.vithu.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        int[] my_Stack = new int[5];
-
         Stack stack = new Stack();
+        
+        //Adding value into stack
+        stack.push(5); //first element
+        stack.push(10);
+        stack.push(15);
+        stack.push(20);
+        stack.push(25); //last element
+        
 
-        stack.push(my_Stack, 2);
-        stack.push(my_Stack, 4);
-        stack.push(my_Stack, 6);
-        stack.push(my_Stack, 8);
-        stack.push(my_Stack, 10);
+        //View the stack values
+        stack.show();
 
-        for (int i = 0; i < my_Stack.length; i++) {
-            System.out.println(my_Stack[i]);
-        }
+        //check stack is empty
+        System.out.println("Check Empty : " + stack.isEmpty());
 
-        System.out.println("*******************");
+        //pop the stack
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        
 
-        /*stack.pop(my_Stack);
-        stack.pop(my_Stack);
-        stack.pop(my_Stack);
+        //View the stack values after pop
+        stack.show();
 
-        for (int i = 0; i < my_Stack.length; i++) {
-            System.out.println(my_Stack[i]);
-        }*/
+
+        // Check stacj is full
+        
+        System.out.println("Stack Full : " + stack.isFull());
     }
 }

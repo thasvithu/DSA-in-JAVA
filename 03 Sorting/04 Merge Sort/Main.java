@@ -3,7 +3,7 @@ public class Main {
         if (left < right) {
             int mid = (left + right) / 2;
 
-            /*
+            
             //print the left sub array
             System.out.println("\n\n*LEFT SUB ARRAY");
             for (int i = left; i <= mid; i++)
@@ -13,7 +13,7 @@ public class Main {
             System.out.println("\n\n--RIGHT SUB ARRAY");
             for (int i = mid + 1; i <= right; i++)
                 System.out.print(arr[i] + " ");
-            */
+            
 
             mergeSort(arr, left, mid);
             mergeSort(arr, mid + 1, right);
