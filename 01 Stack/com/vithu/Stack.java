@@ -2,17 +2,18 @@ package com.vithu;
 
 public class Stack {
     int[] stackArray = new int[5];
-    int top = 0; //default value 0
+    int top = -1; //default value -1
+    int size = stackArray.length;
 
     // Inserting elements
     public void push(int value) {
         //System.out.println("Top Value is : " + top); //check the top value
-        if (top < stackArray.length) {
-            stackArray[top] = value;
-            top = top + 1;
+        if (isFull()) {
+            System.out.println("Stack is full!");
         }
         else {
-            System.out.println("Stack is full!");
+            top = top + 1;
+            stackArray[top] = value;
         }
     }
 
@@ -22,7 +23,7 @@ public class Stack {
             System.out.println("Stack is Empty");
         }
         else {
-            for (int i = top - 1; i >= 0; i--) {
+            for (int i = top; i >= 0; i--) {
                 System.out.println(stackArray[i]);
             }
         }
@@ -30,7 +31,7 @@ public class Stack {
 
     // Check Stack Empty
     public boolean isEmpty() {
-        return top == 0;
+        return top == -1;
     }
 
     // Delete stack element
@@ -40,14 +41,19 @@ public class Stack {
             return -1;
         }
         else {
+            int data = stackArray[top];
             top = top - 1;
-            stackArray[top] = 0;
-            return stackArray[top];
+            return data;
         }
     }
 
     //check Stack is full
     public boolean isFull() {
-        return top >= stackArray.length;
+        return top == size - 1;
+    }
+
+    //View the current element in the top
+    int peek() {
+        return stackArray[top];
     }
 }
